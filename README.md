@@ -47,7 +47,7 @@ The problem at hand will fall under these following:
 
 Our next step would be to select a performace measure. As this challenge falls under a regression task, we might be interested in using the commonly selected **Root Mean Square Error (RMSE)** It measure the *standard deviation (the square root of the variance, the average of the squared deviation from the mean)* of the errors the system makes in it predictions.   
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;RMSE(X,h)=\sqrt{\frac{1}{m}\sum_{i=1}^{m}{({h({x^{(i)}})-y^{(i)}})^2}}" title="RMSE(X,h)=\sqrt{\frac{1}{m}\sum_{i=1}^{m}{({h({x^{(i)}})-y^{(i)}})^2}}" style="background-color:white;color:black;"/>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;RMSE(X,h)=\sqrt{\frac{1}{m}\sum_{i=1}^{m}{({h({x^{(i)}})-y^{(i)}})^2}}" title="RMSE(X,h)=\sqrt{\frac{1}{m}\sum_{i=1}^{m}{({h({x^{(i)}})-y^{(i)}})^2}}" style="background-color:white"/>
 
 ### Implementation 
 
