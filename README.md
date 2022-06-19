@@ -1,5 +1,7 @@
 # California Housing Prices from 1990
 
+## Work in progress...
+
 ## Project aim  
 My aim with this sample project is to show how to setup an end-to-end ML project by taking advantage of scikit-learn pipeline
 
@@ -16,13 +18,13 @@ Please make sure to update tests as appropriate.
 
 ## Project steps: 
 
-    - Understand the big picutre and the research question 
-    - Understand and explore the data with visualization 
-    - Prepare the data for ML algorithms 
-    - Select and train models 
-    - Fine-tune the models 
-    - Present the results 
-    - And finally, launch, monitor, and maintain the system
+- Understand the big picutre and the research question 
+- Understand and explore the data with visualization 
+- Prepare the data for ML algorithms 
+- Select and train models 
+- Fine-tune the models 
+- Present the results 
+- And finally, launch, monitor, and maintain the system
 
 
 ### Framing the problem 
@@ -37,9 +39,9 @@ Now that we have an idea about the company status and the desired outcome, we ne
 
 The problem at hand will fall under these following: 
 
-    - Supervised learning as we have *labeled* training examples. 
-    - Regression task as we want to predict a value. It is a *multivariate regression* problem as we will use multiple features to make a prediction.
-    - Batch learning we be used as we do not have continues incoming flow/streaming of data and that the data is small enough to fit in memory.  
+- Supervised learning as we have *labeled* training examples. 
+- Regression task as we want to predict a value. It is a *multivariate regression* problem as we will use multiple features to make a prediction.
+- Batch learning we be used as we do not have continues incoming flow/streaming of data and that the data is small enough to fit in memory.  
 
 *"If the data were huge, we could either split the batch learning work across multiple servers (using the MapReduce technique), or use an online learning techniques."*
 
@@ -61,10 +63,10 @@ pip install stuff here...
 
 
 
-## Resources 
+## Resources    
 
-    - [Comprehensive guide to styling a github readme file](https://ellen-park.medium.com/comprehensive-guide-to-styling-a-github-readme-2df7a6db1a00)
-    - [mildbread readme styling](https://gist.github.com/milkbread/5795012)
+- [Comprehensive guide to styling a github readme file](https://ellen-park.medium.com/comprehensive-guide-to-styling-a-github-readme-2df7a6db1a00)
+- [mildbread readme styling](https://gist.github.com/milkbread/5795012)
 
 ## License 
 
