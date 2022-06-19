@@ -8,7 +8,7 @@ My aim with this sample project is to show how to setup an end-to-end ML project
 A pipeline can be defined as a sequence of data processing components. These are crusial in ML systems as a lot of data needs to be manipulated and tranformed. The components are ran asynchronusly and each component pulls in a large amount of data, processes it, and spits out the result in another data store, and then some time
 later the next component in the pipeline pulls this data and spits out its own output, etc. The components are fairly self-contained: the data store is the interface between the components. Be careful with the components breaking down, they can go unnoticed until much later in the pipeline.  
 
-The data we are going to explore can be found here [California Housing Prices](xxx)
+The data we are going to explore can be found here [California Housing Prices](https://github.com/ageron/handson-ml/tree/master/datasets/housing)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -18,13 +18,14 @@ Please make sure to update tests as appropriate.
 
 ## Project steps: 
 
-- Understand the big picutre and the research question 
-- Understand and explore the data with visualization 
-- Prepare the data for ML algorithms 
-- Select and train models 
-- Fine-tune the models 
-- Present the results 
-- And finally, launch, monitor, and maintain the system
+- Understand the big picutre and the research question.
+- Setup the environment using Conda with yml file (check the dependencies I choose to install, you can change as you wish).  
+- Get our hands dirty by exploring and understanding the data by using Dash Plotly to visualize and analyze the variables. 
+- Prepare the data for ML algorithms. 
+- Select and train models. 
+- Fine-tune the models. 
+- Present the results. 
+- And finally, launch, monitor, and maintain the system.
 
 
 ### Framing the problem 
@@ -51,6 +52,13 @@ Our next step would be to select a performace measure. As this challenge falls u
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;RMSE(X,h)=\sqrt{\frac{1}{m}\sum_{i=1}^{m}{({h({x^{(i)}})-y^{(i)}})^2}}" title="RMSE(X,h)=\sqrt{\frac{1}{m}\sum_{i=1}^{m}{({h({x^{(i)}})-y^{(i)}})^2}}" style="background-color:white"/>
 
+The RMSE is generally fine when implementing a regression model but when one has many outliers the *Mean Absolute Error (aka average absolute deviation)* might be better to use. 
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;MAE(X,h)=\frac{1}{m}\sum_{i=1}^{m}{|{h({x^{(i)}})-y^{(i)}}}|" title="MAE(X,h)=\frac{1}{m}\sum_{i=1}^{m}{|{h({x^{(i)}})-y^{(i)}}}|" style="background-color:white"/>
+
+However, both these equations are ways to measure the distance between two vectors: the predictions vector and the targets vector. 
+
+
 ### Implementation 
 
 ```batch
@@ -67,6 +75,9 @@ pip install stuff here...
 
 - [Comprehensive guide to styling a github readme file](https://ellen-park.medium.com/comprehensive-guide-to-styling-a-github-readme-2df7a6db1a00)
 - [mildbread readme styling](https://gist.github.com/milkbread/5795012)
+- [Hands-on Machine Learning with Scikit-learn and TensorFlow by Aurélien Géron](https://upload.houchangtech.com/pdf/Hands-on_Machine_Learning.pdf)
+-[Creating an environment from an environment.yml file](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+-[Dash Plotly](https://dash.plotly.com/)
 
 ## License 
 
