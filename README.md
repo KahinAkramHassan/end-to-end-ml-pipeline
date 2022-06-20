@@ -50,23 +50,33 @@ The problem at hand will fall under these following:
 
 Our next step would be to select a performace measure. As this challenge falls under a regression task, we might be interested in using the commonly selected **Root Mean Square Error (RMSE)** It measure the *standard deviation (the square root of the variance, the average of the squared deviation from the mean)* of the errors the system makes in it predictions.   
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;RMSE(X,h)=\sqrt{\frac{1}{m}\sum_{i=1}^{m}{({h({x^{(i)}})-y^{(i)}})^2}}" title="RMSE(X,h)=\sqrt{\frac{1}{m}\sum_{i=1}^{m}{({h({x^{(i)}})-y^{(i)}})^2}}" style="background-color:white"/>
+<img src="https://latex.codecogs.com/svg.latex?RMSE(X,h)=\sqrt{\frac{1}{m}\sum_{i=1}^{m}{({h({x^{(i)}})-y^{(i)}})^2}}" title="RMSE(X,h)=\sqrt{\frac{1}{m}\sum_{i=1}^{m}{({h({x^{(i)}})-y^{(i)}})^2}}" style="background-color:white"/>
 
 The RMSE is generally fine when implementing a regression model but when one has many outliers the *Mean Absolute Error (aka average absolute deviation)* might be better to use. 
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;MAE(X,h)=\frac{1}{m}\sum_{i=1}^{m}{|{h({x^{(i)}})-y^{(i)}}}|" title="MAE(X,h)=\frac{1}{m}\sum_{i=1}^{m}{|{h({x^{(i)}})-y^{(i)}}}|" style="background-color:white"/>
+<img src="https://latex.codecogs.com/svg.latex?MAE(X,h)=\frac{1}{m}\sum_{i=1}^{m}{|{h({x^{(i)}})-y^{(i)}}}|" title="MAE(X,h)=\frac{1}{m}\sum_{i=1}^{m}{|{h({x^{(i)}})-y^{(i)}}}|" style="background-color:white"/>
 
 However, both these equations are ways to measure the distance between two vectors: the predictions vector and the targets vector. 
 
-
 ### Implementation 
 
+When I created my environment I added the Ipykernel to the yml file but somehow it did not get installed. So, I had to run the following in the terminal: 
 ```batch
-pip install stuff here...
+#Activate the environment you want to install the dependency under.
+conda activate "env name"
 ```
 
+```batch
+#Install the ipykernel dependency as root
+pip install ipykernel -U --user --force-reinstall
+```
+
+Let's move on. We first need to "somehow" split the dataset into train/test sets. This step is important as we do not want to split it diffrently each time we run the program. Over time the whole dataset will get exposed to the algorithms. Now, this step can be implemented in many different ways, so here we'll just follow the example shown in the book. Remember, this sample project is for learning, not showing off our coding skills. But if you have a "better" ways to solve this, please do shout out.  
+
 ```python
-# Code goes here... 
+# See te split_train_test function under notebooks/split_data.ipynb
+train_set, test_set = split_train_test(raw_csv,0.2)
+print(len(train_set), 'Train + ', len(test_set), 'test')
 ```
 
 
@@ -76,8 +86,8 @@ pip install stuff here...
 - [Comprehensive guide to styling a github readme file](https://ellen-park.medium.com/comprehensive-guide-to-styling-a-github-readme-2df7a6db1a00)
 - [mildbread readme styling](https://gist.github.com/milkbread/5795012)
 - [Hands-on Machine Learning with Scikit-learn and TensorFlow by Aurélien Géron](https://upload.houchangtech.com/pdf/Hands-on_Machine_Learning.pdf)
--[Creating an environment from an environment.yml file](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
--[Dash Plotly](https://dash.plotly.com/)
+- [Creating an environment from an environment.yml file](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+- [Dash Plotly](https://dash.plotly.com/)
 
 ## License 
 
