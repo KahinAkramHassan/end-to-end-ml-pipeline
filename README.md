@@ -1,5 +1,4 @@
-# California Housing Prices from 1990
-
+# End-to-end ML pipeline implementation with Scikit-learn 
 ## Work in progress...
 
 ## Project aim  
@@ -8,7 +7,7 @@ My aim with this sample project is to show how to setup an end-to-end ML project
 A pipeline can be defined as a sequence of data processing components. These are crusial in ML systems as a lot of data needs to be manipulated and tranformed. The components are ran asynchronusly and each component pulls in a large amount of data, processes it, and spits out the result in another data store, and then some time
 later the next component in the pipeline pulls this data and spits out its own output, etc. The components are fairly self-contained: the data store is the interface between the components. Be careful with the components breaking down, they can go unnoticed until much later in the pipeline.  
 
-The data we are going to explore can be found here [California Housing Prices](https://github.com/ageron/handson-ml/tree/master/datasets/housing)
+The data we are going to explore can be found here [California Housing Prices](https://github.com/ageron/handson-ml/tree/master/datasets/housing) from 1990.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
