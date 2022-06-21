@@ -1,6 +1,6 @@
 # End-to-end ML with Scikit-learn pipeline
 
-### <p style='color=red'>Work in progress...</p>
+### <p style='color:red'>Work in progress...</p>
 
 ## Project aim  
 My aim with this project is to show how to setup an end-to-end ML project by taking advantage of scikit-learn pipeline.
