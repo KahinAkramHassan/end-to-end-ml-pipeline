@@ -1,7 +1,7 @@
 # End-to-end ML with Scikit-learn pipeline
 
 ```diff
-- <p style='color:red'>Work in progress...</p>
+- Work in progress...
 ```
 
 ## Project aim  
