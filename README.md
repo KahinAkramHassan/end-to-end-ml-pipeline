@@ -1,8 +1,8 @@
-# End-to-end ML pipeline implementation with Scikit-learn 
+# End-to-end ML with Scikit-learn pipeline
 ## Work in progress...
 
 ## Project aim  
-My aim with this sample project is to show how to setup an end-to-end ML project by taking advantage of scikit-learn pipeline
+My aim with this project is to show how to setup an end-to-end ML project by taking advantage of scikit-learn pipeline.
 
 A pipeline can be defined as a sequence of data processing components. These are crusial in ML systems as a lot of data needs to be manipulated and tranformed. The components are ran asynchronusly and each component pulls in a large amount of data, processes it, and spits out the result in another data store, and then some time
 later the next component in the pipeline pulls this data and spits out its own output, etc. The components are fairly self-contained: the data store is the interface between the components. Be careful with the components breaking down, they can go unnoticed until much later in the pipeline.  

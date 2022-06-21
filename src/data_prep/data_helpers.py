@@ -1,6 +1,8 @@
 #Created 06/19/22 7:01pm
 #Author: Kahin Akram Hassan
-#This little helper is for fetching the data from the source, loading it, and splitting it into train and test sets
+#This little helper is for fetching the data from the source, 
+# loading it, and splitting it into train and test sets
+#Some of the code is inspired by the steps in ch2. 
 
 #====================================Dependencies==================================================
 
@@ -25,7 +27,8 @@ def load_housing_data():
             .format(constants.FILE_NAME,constants.HOUSING_PATH))
     else:
         open(local_file_name,'wb').write(req.content)
-        print('Done downloading! Check "{0}" for the file.'.format(constants.HOUSING_PATH))
+        print('Done downloading! Check "{0}" for the file.'\
+            .format(constants.HOUSING_PATH))
 
 #Read the data into dataframe 
 def read_csv_file():
@@ -37,7 +40,8 @@ def read_csv_file():
     
     return df
 
-#Functions to split the datasets into train and test in a robust way (combination with hashing and unique id creation)
+#Functions to split the datasets into train and test in a robust way 
+# (combination with hashing and unique id creation)
 def test_set_check(identifier,test_ratio,hash):
     # Compute a hash of each instance’s identifier and keep only the last byte of the hash.
     # Then put the instance in the test set if this value is lower or equal to 51 (~20% of 256).
