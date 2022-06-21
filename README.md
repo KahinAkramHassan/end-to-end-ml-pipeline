@@ -74,7 +74,7 @@ pip install ipykernel -U --user --force-reinstall
 Let's move on. We first need to "somehow" split the dataset into train/test sets. This step is important as we do not want to split it diffrently each time we run the program. Over time the whole dataset will get exposed to the algorithms. Now, this step can be implemented in many different ways, so here we'll just follow the example shown in the book. Remember, this sample project is for learning, not showing off our coding skills. But if you have a "better" ways to solve this, please do shout out.  
 
 ```python
-# See te split_train_test function under data_helper.py
+# See the split_train_test function under data_helpers.py
 train_set, test_set = data.split_train_test_id(housing,0.2,'id')
 strat_train_set, strat_test_set = data.stratisfied_split_train_test(housing,0.2,"income_cat")
 ```
