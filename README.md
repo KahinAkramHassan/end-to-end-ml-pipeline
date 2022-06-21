@@ -1,7 +1,7 @@
 # End-to-end ML with Scikit-learn pipeline
 
 ```diff
-- Work in progress...
+- For the latest work please check the development branch. This branch might not be up to date... 
 ```
 
 ## Project aim  
