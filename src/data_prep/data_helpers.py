@@ -6,7 +6,7 @@
 
 #====================================Dependencies==================================================
 
-from . import constants
+from . import data_constants as c
 
 import os
 import pandas as pd
@@ -19,20 +19,20 @@ from sklearn.model_selection import StratifiedShuffleSplit
 #Load the csv file into a pandas dataframe
 def load_housing_data():
 
-    req = requests.get(constants.DOWNLOAD_URL + constants.FILE_NAME)
-    local_file_name = constants.HOUSING_PATH + constants.FILE_NAME
+    req = requests.get(c.DOWNLOAD_URL + c.FILE_NAME)
+    local_file_name = c.HOUSING_PATH + c.FILE_NAME
     
     if os.path.exists(local_file_name):
         print('The file "{0}" already exists under "{1}".'\
-            .format(constants.FILE_NAME,constants.HOUSING_PATH))
+            .format(c.FILE_NAME,c.HOUSING_PATH))
     else:
         open(local_file_name,'wb').write(req.content)
         print('Done downloading! Check "{0}" for the file.'\
-            .format(constants.HOUSING_PATH))
+            .format(c.HOUSING_PATH))
 
 #Read the data into dataframe 
 def read_csv_file():
-    df = pd.read_csv(constants.HOUSING_PATH + constants.FILE_NAME)
+    df = pd.read_csv(c.HOUSING_PATH + c.FILE_NAME)
     df.reset_index() # add "index" column 
     #To be sure that we use unique identifiers when splitting the data and that 
     # adding new data will not break the split, we can create a new id column
