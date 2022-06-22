@@ -6,32 +6,32 @@
 
 from distutils.log import debug
 from dash import Dash, html, dcc
-import plotly.express as px
-import pandas as pd 
+import dash_bootstrap_components as dbc
 
-# Initiate the dash figure 
-app = Dash(__name__)
+from dash_prep import layouts as page_layout, callbacks
 
-# Example df -- Will fix this file much better soon. 
-df = pd.DataFrame({
-    "Fruit":["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
-    "Amount":[4, 1, 2, 2, 4, 5],
-    "City":["SF", "SF", "SF", "Montreal", "NY", "Montreal"]
-})
+# Initialize the dash app 
+app = Dash(
+    __name__,
+    suppress_callback_exceptions=True,
+    external_stylesheets=[dbc.themes.BOOTSTRAP],
+    meta_tags=[{
+        'name':'viewport',
+        'content':'width=device-width, initial-scale=1'
+    }]
+)
 
-fig = px.bar(df, x="Fruit", y="Amount", color="City", barmode="group")
+#Load the navbar 
+navbar = page_layout.navbar
+#Dynamic part of the app
+content = html.Div(id="page-content")
 
-app.layout = html.Div(children=[
-    html.H1(children=['Hello Dashy']),
-    html.Div(children=[
-        """ A Dash web application example """
-    ]),
-    
-    dcc.Graph(
-        id='example-graph',
-        figure=fig
-    )
-]) 
+#Set the app layout 
+app.layout = dbc.Container(children=[
+    dcc.Location(id="url",refresh=False),
+    navbar,
+    content
+], fluid=False)
 
-if __name__ == '__main__':
-    app.run_server(debug=True)
+if __name__=='__main__':
+    app.run_server(port=8051, debug=True)    

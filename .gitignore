@@ -4,6 +4,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#Mapbox Token file 
+config/mapbox_token.yml
+
 # C extensions
 *.so
 
